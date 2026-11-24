@@ -1,0 +1,724 @@
+
+/* ==========================
+   ESTUDIA MÁS
+   Diseño visual de la página
+   ========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f8f7ff;
+    color: #252344;
+    line-height: 1.6;
+}
+
+/* COLORES GENERALES */
+
+:root {
+    --purple: #7357e8;
+    --purple-dark: #5036c5;
+    --purple-light: #eee9ff;
+    --text: #252344;
+    --gray: #6f7086;
+    --white: #ffffff;
+}
+
+/* ENCABEZADO */
+
+.header {
+    width: 100%;
+    min-height: 75px;
+    padding: 15px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border-bottom: 1px solid #eeeaf9;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 25px;
+    font-weight: 800;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.logo-icon {
+    font-size: 30px;
+}
+
+.logo-color {
+    color: var(--purple);
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #5e5c78;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: var(--purple);
+}
+
+/* BIENVENIDA */
+
+.hero {
+    min-height: 520px;
+    padding: 70px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 90% 20%,
+        #e5ddff 0,
+        transparent 35%),
+        linear-gradient(135deg, #faf9ff, #f0ecff);
+}
+
+.hero-content {
+    max-width: 560px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 7px 15px;
+    border-radius: 30px;
+    background: #e8e1ff;
+    color: var(--purple-dark);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    margin-top: 20px;
+    font-size: clamp(38px, 5vw, 65px);
+    line-height: 1.12;
+    font-weight: 850;
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    color: var(--purple);
+}
+
+.hero-content > p {
+    margin-top: 22px;
+    max-width: 480px;
+    color: var(--gray);
+    font-size: 17px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 14px 25px;
+    border-radius: 12px;
+    background: var(--purple);
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 8px 20px #7357e844;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--purple-dark);
+    transform: translateY(-3px);
+}
+
+.motivation {
+    margin-top: 25px;
+    color: #77718f;
+    font-size: 14px;
+    font-style: italic;
+}
+
+/* ILUSTRACIÓN DE BIENVENIDA */
+
+.hero-illustration {
+    position: relative;
+    width: 360px;
+    height: 360px;
+    flex-shrink: 0;
+}
+
+.circle-bg {
+    position: absolute;
+    inset: 25px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #d8cbff, #bcaaff);
+    box-shadow: 0 20px 50px #7357e833;
+}
+
+.book {
+    position: absolute;
+    top: 95px;
+    left: 70px;
+    width: 220px;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 125px;
+    transform: rotate(-8deg);
+    filter: drop-shadow(0 15px 12px #5036c544);
+}
+
+.floating {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0 10px 25px #40308020;
+}
+
+.star {
+    top: 20px;
+    right: 35px;
+    width: 65px;
+    height: 65px;
+    font-size: 35px;
+}
+
+.pencil {
+    bottom: 35px;
+    left: 5px;
+    width: 70px;
+    height: 70px;
+    font-size: 38px;
+    transform: rotate(-15deg);
+}
+
+.bulb {
+    bottom: 55px;
+    right: 5px;
+    width: 65px;
+    height: 65px;
+    font-size: 35px;
+}
+
+.heart {
+    top: 85px;
+    left: 0;
+    width: 55px;
+    height: 55px;
+    font-size: 30px;
+}
+
+/* PRESENTACIÓN */
+
+.intro {
+    margin: 0 auto;
+    padding: 35px 8%;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    max-width: 1200px;
+}
+
+.intro-icon {
+    width: 75px;
+    height: 75px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 22px;
+    background: #fff0d7;
+    font-size: 38px;
+}
+
+.intro h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.intro p {
+    color: var(--gray);
+    max-width: 750px;
+}
+
+/* SECCIÓN DE MATERIAS */
+
+.subjects-section {
+    padding: 75px 8%;
+    background: #ffffff;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading h2 {
+    margin-top: 15px;
+    font-size: clamp(30px, 4vw, 45px);
+    letter-spacing: -1px;
+}
+
+.section-heading h2 span {
+    color: var(--purple);
+}
+
+.section-heading p {
+    margin-top: 12px;
+    color: var(--gray);
+}
+
+/* TARJETAS */
+
+.subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.subject-card {
+    position: relative;
+    padding: 30px;
+    border: 1px solid #eeeaf5;
+    border-radius: 24px;
+    background: #ffffff;
+    box-shadow: 0 8px 30px #25234408;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.subject-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px #25234415;
+}
+
+.subject-icon {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 22px;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.subject-number {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 35px;
+    font-weight: 900;
+    opacity: 0.12;
+}
+
+.subject-card h3 {
+    font-size: 27px;
+    margin-bottom: 12px;
+}
+
+.subject-card > p {
+    color: var(--gray);
+    margin-bottom: 25px;
+}
+
+/* COLORES DE CADA MATERIA */
+
+.math {
+    border-top: 5px solid #7357e8;
+}
+
+.math .subject-icon {
+    background: #eee8ff;
+}
+
+.math h3 {
+    color: #6348d7;
+}
+
+.language {
+    border-top: 5px solid #ef7caa;
+}
+
+.language .subject-icon {
+    background: #ffe9f1;
+}
+
+.language h3 {
+    color: #d95d91;
+}
+
+.biology {
+    border-top: 5px solid #45b98a;
+}
+
+.biology .subject-icon {
+    background: #e0f8ec;
+}
+
+.biology h3 {
+    color: #24966a;
+}
+
+.physics {
+    border-top: 5px solid #4c9ce8;
+}
+
+.physics .subject-icon {
+    background: #e3f1ff;
+}
+
+.physics h3 {
+    color: #347ecb;
+}
+
+.chemistry {
+    border-top: 5px solid #f1aa42;
+}
+
+.chemistry .subject-icon {
+    background: #fff2d9;
+}
+
+.chemistry h3 {
+    color: #d58a20;
+}
+
+/* INFORMACIÓN */
+
+.topic {
+    padding: 20px;
+    border-radius: 16px;
+    background: #f8f7fc;
+    margin-bottom: 25px;
+}
+
+.topic strong {
+    display: block;
+    margin-bottom: 10px;
+    color: #373452;
+}
+
+.topic ul {
+    padding-left: 20px;
+    color: #6f7086;
+}
+
+.topic li {
+    margin-bottom: 5px;
+}
+
+/* PREGUNTAS */
+
+.questions {
+    padding-top: 20px;
+    border-top: 1px solid #eeeaf5;
+}
+
+.questions h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+details {
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 12px;
+    background: #f8f7fc;
+    transition: 0.3s;
+}
+
+details[open] {
+    background: #eee9ff;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: 650;
+    color: #484365;
+    list-style-position: inside;
+}
+
+summary:hover {
+    color: var(--purple);
+}
+
+details p {
+    margin-top: 12px;
+    padding-left: 5px;
+    color: #66647d;
+    font-size: 14px;
+}
+
+/* BANNER FINAL */
+
+.final-banner {
+    margin: 70px 8%;
+    padding: 55px 30px;
+    text-align: center;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #7357e8, #9b7cf5);
+    color: white;
+    box-shadow: 0 20px 40px #7357e833;
+}
+
+.banner-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.final-banner h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.final-banner p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #f1edff;
+}
+
+.btn-light {
+    background: white;
+    color: var(--purple-dark);
+    box-shadow: none;
+}
+
+.btn-light:hover {
+    background: #f1edff;
+    color: var(--purple-dark);
+}
+
+/* SOBRE NOSOTROS */
+
+.about {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 40px 8% 75px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.about h2 span {
+    color: var(--purple);
+}
+
+.about p {
+    color: var(--gray);
+}
+
+/* PIE DE PÁGINA */
+
+.footer {
+    padding: 35px 20px;
+    text-align: center;
+    background: #252344;
+    color: white;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.footer p {
+    color: #c8c3e2;
+    margin-bottom: 15px;
+}
+
+.footer small {
+    color: #aaa5ca;
+}
+
+/* ADAPTACIÓN A TABLET */
+
+@media (max-width: 900px) {
+
+    .hero {
+        padding: 60px 6%;
+    }
+
+    .hero-illustration {
+        width: 280px;
+        height: 280px;
+    }
+
+    .book {
+        top: 75px;
+        left: 45px;
+        font-size: 100px;
+    }
+
+    .circle-bg {
+        inset: 15px;
+    }
+
+    .subjects-grid {
+        gap: 20px;
+    }
+
+    .subject-card {
+        padding: 25px;
+    }
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 650px) {
+
+    .header {
+        padding: 15px 5%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .menu {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 6% 35px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-content > p {
+        font-size: 15px;
+    }
+
+    .hero-illustration {
+        width: 260px;
+        height: 260px;
+        margin-top: 20px;
+    }
+
+    .book {
+        top: 65px;
+        left: 40px;
+        font-size: 95px;
+    }
+
+    .intro {
+        padding: 35px 6%;
+        align-items: flex-start;
+    }
+
+    .intro-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 28px;
+    }
+
+    .intro h2 {
+        font-size: 20px;
+    }
+
+    .intro p {
+        font-size: 14px;
+    }
+
+    .subjects-section {
+        padding: 55px 5%;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .subjects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .subject-card {
+        padding: 25px 22px;
+    }
+
+    .subject-card h3 {
+        font-size: 25px;
+    }
+
+    .final-banner {
+        margin: 45px 5%;
+        padding: 40px 22px;
+    }
+
+    .final-banner h2 {
+        font-size: 30px;
+    }
+
+    .about {
+        padding: 35px 7% 55px;
+    }
+
+    .about h2 {
+        font-size: 27px;
+    }
+}
+
+/* PANTALLAS MUY PEQUEÑAS */
+
+@media (max-width: 360px) {
+
+    .menu {
+        gap: 12px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .subject-card {
+        padding: 20px 16px;
+    }
+}
